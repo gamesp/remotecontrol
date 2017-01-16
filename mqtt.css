@@ -1,0 +1,48 @@
+/* 
+    Created on : 09-ene-2017, 17:45:47
+    Author     : damian
+*/
+
+
+#contenedor_botonera {
+    float: left;
+}
+
+#botonera {
+clear: both
+}
+
+#botonera div {
+        margin: 0 5% 0 3%;
+}
+#botonera div div, #botonera a {
+    width: 4em;
+    height: 4em;
+}
+
+#monitor {
+    margin: 20px;
+    float: left;
+}
+
+.ui-radio label {
+    font-size: 12px;
+}
+
+#receiveState {
+    color: red;
+}
+
+#sendCommands {
+    visibility: hidden;
+}
+
+#delete {
+    float:right;
+}
+
+#F {background: red;}
+#L {background: blue;}
+#G {background: orange;}
+#R {background: green;}
+#B {background: gray;}

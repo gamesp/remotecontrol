@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Pruebas de MQTT</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <link rel="stylesheet" href="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css" />
+        <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+        <script src="https://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+        <link rel="stylesheet" type="text/css" href="mqtt.css" media="screen" />
+        <script src="js/mqttws31-min.js" type="text/javascript"></script>
+        <script src='js/mqtt.js' type='text/javascript'></script>
+    </head>
+    <body>
+        <div id="app" data-role="page">
+            <!--<div data-role="header">
+                <h2>Gamesp</h2><a id="options" href="#" class="ui-btn-right ui-btn ui-btn-inline ui-mini ui-corner-all ui-btn-icon-right ui-icon-gear">Options</a>
+            </div>-->
+            <div id="contenedor_botonera">
+                <div id="botonera" class="ui-grid-c">
+                    <div class="ui-block-a"><a></a></div>
+                    <div class="ui-block-b"><a data-role="button" id="F" class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-u ui-btn-icon-notext ui-btn-inline" href="#"></a></div>
+                    <div class="ui-block-c"><a></a></div>
+
+                    <div class="ui-block-a"><a data-role="button" id="L" class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-l ui-btn-icon-notext ui-btn-inline" href="#"></a></div>
+                    <div class="ui-block-b"><a data-role="button" id="G" class="ui-shadow ui-btn ui-corner-all ui-icon-check ui-btn-icon-notext ui-btn-inline" href="#"></a></div>
+                    <div class="ui-block-c"><a data-role="button" id="R" class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-r ui-btn-icon-notext ui-btn-inline" href="#"></a></div>
+
+                    <div class="ui-block-a"><a></a></div>
+                    <div class="ui-block-b"><a data-role="button" id="B" class="ui-shadow ui-btn ui-corner-all ui-icon-arrow-d ui-btn-icon-notext ui-btn-inline" href="#"></a></div>
+                    <div class="ui-block-c"><a></a></div>
+                </div>
+            </div>
+            <div id="monitor">
+                <ul data-role="listview" data-inset="true" data-split-theme="a">
+                    <li data-role="list-divider">Connected?<span class="ui-li-count" id="receiveState">OFF</span></li>
+                    <li data-role="list-divider">Executing <span id="receiveExecuting" class="ui-li-count">SLEEP</span></li>
+                    <li data-role="list-divider">Send direct command or a group<span class="ui-li-count" id="sendCommands"></span>
+                        <fieldset data-role="controlgroup" data-type="horizontal" >
+                            <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2a" value="direct" checked="checked">
+                            <label for="radio-choice-h-2a" >Direct</label>
+                            <input type="radio" name="radio-choice-h-2" id="radio-choice-h-2b" value="array">
+                            <label for="radio-choice-h-2b" >Group</label>
+                        </fieldset>
+                    </li>
+                    <li data-role="list-divider">Commands group<a id="delete" href="#" class="ui-btn ui-btn-inline ui-icon-delete ui-btn-icon-notext"></a>
+                        <p id="sendIconCommands"></p>
+                    </li>
+                    <!-- <input type="button" value="Disconnect" onClick="doDisconnect()"/>
+                    <input type="button" value="Connect" onClick="doConnect()"/> -->
+                </ul>
+            </div>
+        </div>
+    </body>
+</html>
