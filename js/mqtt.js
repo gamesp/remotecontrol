@@ -49,6 +49,8 @@ function onConnect() {
     client.subscribe("/gamesp/protoAlfaESP8266/commands");
     console.info('Conected ');
     $('#receiveState').css({'color': 'green'});
+    // send a Stop command to receive coordinates
+    doSend('S');
 }
 
 function onFail() {
@@ -75,7 +77,7 @@ function onMessageArrived(message) {
             // blink the icon
             blinkCommand(message.payloadString);
             // when not receive commands delete de icon and the array
-            if (message.payloadString === 'SLEEP') {
+            if (message.payloadString.includes("Mov:S")) {
                 // delete array commands and icons
                 deleteCommands();
             }
@@ -177,7 +179,7 @@ $(document).ready(function () {
         deleteCommands();
     });
     // configuration
-    $('#delete').click(function() {
+    $('#options').click(function() {
         options();
     });
 });
